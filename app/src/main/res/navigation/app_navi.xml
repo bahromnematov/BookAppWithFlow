@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navi"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.bookappwithflow.presentation.ui.screens.SplashScreen"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen_to_BookScreen"
+            app:destination="@id/bookScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="uz.gita.bookappwithflow.presentation.ui.screens.LoginScreen"
+        android:label="screen_login"
+        tools:layout="@layout/screen_login">
+        <action
+            android:id="@+id/action_loginScreen_to_verifyScreen"
+            app:destination="@id/verifyScreen"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/verifyScreen"
+        android:name="uz.gita.bookappwithflow.presentation.ui.screens.VerifyScreen"
+        android:label="screen_loginVerify"
+        tools:layout="@layout/screen_verify">
+        <action
+            android:id="@+id/action_LoginverifyScreen_to_BookScreen"
+            app:destination="@+id/bookScreen"/>
+
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/bookScreen"
+        android:name="uz.gita.bookappwithflow.presentation.ui.screens.BookScreen"
+        android:label="screen_book"
+        tools:layout="@layout/screen_book">
+
+    </fragment>
+
+
+
+
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/LogoutScreen"-->
+    <!--        android:name="uz.gita.bookapp.presentation.ui.screens.LogoutScreen"-->
+    <!--        android:label="logout_contact"-->
+    <!--        tools:layout="@layout/logout_dialog">-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_logoutScreen_to_LoginScreen"-->
+    <!--            app:destination="@+id/loginScreen"/>-->
+
+    <!--    </fragment>-->
+
+
+</navigation>

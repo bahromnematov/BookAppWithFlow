@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_saaa"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/titile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/auther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/titile"
+        app:layout_constraintTop_toBottomOf="@id/titile"
+        tools:text="Auther" />
+
+    <TextView
+        android:id="@+id/desciribtion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:padding="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/auther"
+        app:layout_constraintTop_toBottomOf="@id/auther"
+        tools:text="describtion" />
+
+    <TextView
+        android:id="@+id/pageCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/desciribtion"
+        app:layout_constraintTop_toBottomOf="@id/desciribtion"
+        tools:text="Page Count" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favourate"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_margin="6dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_star_outline_24"
+        android:tint="@android:color/white"
+       app:layout_constraintEnd_toStartOf="@id/deleted"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/deleted"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_margin="6dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_delete"
+        android:tint="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
